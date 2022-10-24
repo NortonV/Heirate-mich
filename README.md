@@ -1,2 +1,3 @@
-# bookish-garbanzo
-Game
+# Plans
+-Julia game
+-2D
