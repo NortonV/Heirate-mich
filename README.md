@@ -1,3 +1,3 @@
 # Plans
--Julia game__
--2D__
+-Julia game <br>
+-2D
