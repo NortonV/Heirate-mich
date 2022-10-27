@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!20 &519420031 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 2260789795432556679, guid: 1b45a5aeddc519e488a304a77f7b6b5b, type: 3}
+  m_PrefabInstance: {fileID: 2260789794992836856}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1237476738068355616
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -244,13 +249,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3610685431719843174, guid: 6e1b6af7e87bc0f4390eb6a158fffa86, type: 3}
-      propertyPath: shot
+    - target: {fileID: 4131616379135988275, guid: 6e1b6af7e87bc0f4390eb6a158fffa86, type: 3}
+      propertyPath: cam
       value: 
-      objectReference: {fileID: 8396848778390129641, guid: ecffc78747d5d70488528dea5925c026, type: 3}
+      objectReference: {fileID: 519420031}
+    - target: {fileID: 6193821768684247475, guid: 6e1b6af7e87bc0f4390eb6a158fffa86, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 7626844104874454903, guid: 6e1b6af7e87bc0f4390eb6a158fffa86, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 7626844104874454903, guid: 6e1b6af7e87bc0f4390eb6a158fffa86, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7626844104874454907, guid: 6e1b6af7e87bc0f4390eb6a158fffa86, type: 3}
       propertyPath: m_RootOrder
