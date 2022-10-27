@@ -6,7 +6,7 @@ public class Player : MonoBehaviour
 {
 
     // Movement
-    public float movementSpeed = 5f;
+    public float movementSpeed = 4f;
     public Rigidbody2D rbPlayer;
     private Vector2 movement;
 
@@ -32,6 +32,7 @@ public class Player : MonoBehaviour
         // Movement
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
+        movement = movement.normalized;
 
         //Rotation
         mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
