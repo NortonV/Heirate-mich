@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 6a3802aa68811ce4f81ffa02b8c8b2e5
+guid: 5d9d429165bb4934f9e3297feb025b24
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -144,7 +144,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Circle
+      name: Bullet
       rect:
         serializedVersion: 2
         x: 0
@@ -239,7 +239,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Circle: -2413806693520163455
+      Bullet: -2413806693520163455
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
