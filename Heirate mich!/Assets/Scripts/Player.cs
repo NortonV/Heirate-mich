@@ -17,13 +17,22 @@ public class Player : MonoBehaviour
     // Shooting
     public Transform firePoint;
     public GameObject bulletPrefab;
-    public float bulletForce = 20f;
+    public float bulletForce = 60f;
 
-
-    // Start is called before the first frame update
-    void Start()
+    // Health
+    private int baseHealth;
+    private int _health;
+    public int Health
     {
+        get { return _health; }
+        set { _health = value; }
+    }
+    private bool secondLife = true;
 
+    private void Start()
+    {
+        baseHealth = 5;
+        Health = baseHealth;
     }
 
     // Update is called once per frame
@@ -46,6 +55,24 @@ public class Player : MonoBehaviour
 
     private void FixedUpdate()
     {
+
+        // Health
+        if (Health <= 0)
+        {
+            print("Dead");
+            // Display death sceen
+            if (secondLife)
+            {
+                // Back to game
+                Health = baseHealth;
+                // secondLife = false
+            }
+            else
+            {
+                // Go to main menu || Play again
+            }
+        }
+
         // Movement
         rbPlayer.MovePosition(rbPlayer.position + movement * movementSpeed * Time.fixedDeltaTime);
 
@@ -55,12 +82,25 @@ public class Player : MonoBehaviour
         rbPlayer.rotation = angle;
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            Destroy(collision.gameObject);
+            this.reduceHealth(3);
+        }
+    }
 
     void Shoot()
     {
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
         Rigidbody2D rbBullet = bullet.GetComponent<Rigidbody2D>();
         rbBullet.AddForce(firePoint.up * bulletForce, ForceMode2D.Impulse);
+    }
+
+    void reduceHealth(int damage)
+    {
+        Health -= damage;
     }
 
 }

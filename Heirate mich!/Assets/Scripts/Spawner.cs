@@ -5,7 +5,7 @@ using UnityEngine;
 public class Spawner : MonoBehaviour
 {
 
-    public GameObject enemy;
+    public GameObject[] enemy;
     public Transform[] spawnPoints;
     private float spawnCooldown;
     public float spawnStartTime;
@@ -23,7 +23,7 @@ public class Spawner : MonoBehaviour
         if (spawnCooldown <= 0)
         {
             int randPos = Random.Range(0, spawnPoints.Length);
-            Instantiate(enemy, spawnPoints[randPos].position, Quaternion.identity);
+            Instantiate(enemy[Random.Range(0, enemy.Length)], spawnPoints[randPos].position, Quaternion.identity);
             spawnCooldown = spawnStartTime;
         }
         else
