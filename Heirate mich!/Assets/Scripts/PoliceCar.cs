@@ -55,7 +55,7 @@ public class PoliceCar : MonoBehaviour
         EnemyName = "PoliceCar";
         Speed = 7;
         MaxHealth = 2;
-        Damage = 2;
+        Damage = 25;
         Health = MaxHealth;
         print("PoliceCar");
 

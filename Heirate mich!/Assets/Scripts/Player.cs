@@ -20,7 +20,8 @@ public class Player : MonoBehaviour
     public float bulletForce = 60f;
 
     // Health
-    private int baseHealth;
+    [SerializeField]
+    private int baseHealth = 100;
     private int _health;
     public int Health
     {
@@ -28,11 +29,12 @@ public class Player : MonoBehaviour
         set { _health = value; }
     }
     private bool secondLife = true;
+    public HealthBar healthBar;
 
     private void Start()
     {
-        baseHealth = 5;
         Health = baseHealth;
+        healthBar.SetBaseHealth(Health);
     }
 
     // Update is called once per frame
@@ -101,6 +103,7 @@ public class Player : MonoBehaviour
     void reduceHealth(int damage)
     {
         Health -= damage;
+        healthBar.SetHealth(Health);
     }
 
 }

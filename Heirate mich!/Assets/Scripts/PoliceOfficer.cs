@@ -77,7 +77,7 @@ public class PoliceOfficer : MonoBehaviour
         EnemyName = "PoliceOfficer";
         Speed = 5;
         MaxHealth = 1;
-        Damage = 1;
+        Damage = 10;
         StopDistance = 4;
         RetreatDistance = 3;
         Health = MaxHealth;
